@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+
+
+/* .dashboard {
+  background-image: url('./images/IMG_5829.JPG');
+  background-size: cover;
+ 
+} */
+
+.App {
+  background-image: url('./images/IMG_5829.JPG');
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+
+.dash-div {
+  background-image: url('./images/IMG_5829.JPG');
+  background-size: cover;
+  height: 90vh;
+  width: 185vh;
+}
+
+#participant-entry-form {
+  height: auto;
+  width: 500px;
+  background: rgba(85, 81, 81, 0.2);
+  color: white;
+}
+
+.entry-form-div {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* .section1-form {
+  
+} */
+
+
+.login {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+#form-login {
+  background: rgba(85, 81, 81, 0.2);
+  color: white;
+}
+  
+  
+/* #login-form {
+  background-color: white;
+  /* opacity: 0.8; */
+  
+  
+
+.row {
+  height: auto;
+  align-items: center;
+}
+
+.border {
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-family: 'Exo 2', sans-serif;
+}
+
+#part-form-header {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#login-btn {
+  justify-self: right;
+}
+
+#relationship {
+  justify-content: center;
+  width: 150px;
+}
+
+.mobile form-control {
+  width: 50px;
+}
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
