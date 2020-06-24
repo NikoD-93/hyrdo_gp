@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderLeftWidth: 0,
         borderRightWidth: 0,
-        borderTopWidth: 0
+        borderTopWidth: 0,
+        marginBottom: 10
     },
     cell: {
         display: "table-cell",
@@ -106,7 +107,27 @@ const styles = StyleSheet.create({
         borderTopWidth: 0,
         borderBottom: 0,
         marginTop: -1
-    }
+    },
+    boatTableColumn1: {
+        display: "flex",
+        flexDirection: "column",
+        flex: 3,
+        borderWidth: 1, 
+        borderLeftWidth: 0, 
+        borderTopWidth: 0,
+        borderBottomWidth: 0,
+        marginTop: -1 
+    },
+    boatTableColumn2: {
+        display: "flex",
+        flexDirection: "column",
+        flex: 1.5,
+        borderWidth: 1, 
+        borderLeftWidth: 0, 
+        borderTopWidth: 0,
+        borderBottom: 0,
+        marginTop: -1
+    },
 
 })
 
@@ -172,7 +193,7 @@ export default class ConvertToPdf extends React.Component {
                             </View>
                         </View>
                         <View style={[styles.tableRow, {borderRightWidth: 1}]}>
-                            <Text style={[{fontFamily: "Times-Bold"}, {fontSize: 10}, {height: "12px"}]}>Emergency Contact Information</Text>
+                            <Text style={[{fontFamily: "Times-Bold"}, {fontSize: 10}, {height: "15px"}]}>Emergency Contact Information</Text>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
@@ -209,8 +230,34 @@ export default class ConvertToPdf extends React.Component {
                                 <Text style={styles.cell}>Email:</Text>
                             </View>
                         </View>
-                    </View>   
-                      
+                    </View> 
+                    <Text style={[{fontSize:10}, {fontFamily: "Times-Bold"}, {marginLeft: "50px"}]}>Section 2</Text>
+                    <View style={styles.table}>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>City:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                                <Text style={styles.cell}>Zip: </Text>
+                            </View>
+                        </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>Country:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                                <Text style={styles.cell}>Nationality:</Text>
+                            </View>
+                        </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>Mobile Phone:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                                <Text style={styles.cell}>Email:</Text>
+                            </View>
+                        </View>
+                    </View>
                 </Page>
             </Document>
         )
