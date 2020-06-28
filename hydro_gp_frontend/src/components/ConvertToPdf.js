@@ -6,9 +6,6 @@ import { Document, Page, Text, View, StyleSheet, Font} from "@react-pdf/renderer
 //    { src: "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap", fontStyle: "normal", fontWeight: 700 }
 // ]})
 const styles = StyleSheet.create({
-    page: {
-        border: 'black'
-    },
     heading: {
         fontFamily: "Times-Roman",
         fontSize: 10
@@ -200,7 +197,7 @@ export default class ConvertToPdf extends React.Component {
                                 <Text style={styles.cell}>Full Name:</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Relationship: </Text>
+                                <Text style={styles.cell}>Relationship:</Text>
                             </View>
                         </View>
                         <View style={[styles.tableRow, {borderRightWidth: 1}]}>
@@ -235,28 +232,63 @@ export default class ConvertToPdf extends React.Component {
                     <View style={styles.table}>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>City:</Text>                         
+                                <Text style={styles.cell}>National Authority:</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Zip: </Text>
+                                <Text style={styles.cell}>Class: </Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Country:</Text>                         
+                                <Text style={styles.cell}>License Number:</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Nationality:</Text>
+                                <Text style={styles.cell}>Date of Issue:</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Mobile Phone:</Text>                         
+                                <Text style={styles.cell}>Boat Manufacturer:</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Email:</Text>
+                                <Text style={styles.cell}>Year of Build:</Text>
                             </View>
                         </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>Engine:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                                <Text style={styles.cell}>Race Number:</Text>
+                            </View>
+                        </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>Team Name:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                                <Text style={styles.cell}>UIM S.L. Number:</Text>
+                            </View>
+                        </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.boatTableColumn1}>
+                                <Text style={styles.cell}>Team Manager:</Text>                         
+                            </View>
+                            <View style={styles.boatTableColumn2}>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={styles.table}>
+                        <View style={[styles.tableRow, {borderRightWidth: 1}, {paddingRight: "10px"}]}>
+                            <Text style={[styles.cell, {height: "auto"}, {paddingLeft:"2px"}]}>
+                            I hereby confirm that the information contained herein is correct. I will conform to the rules and regulations of the U.I.M., National Authority and Local Organizer. I assure that all members of my teams, its sponsors, and other such acquainted persons shall be governed by the same rules previously expressed. By signing this Entry Form, the driver confirms that participation in the above mentioned event for him/her and any other person connected or being the member of his/her team is under their own risk and responsibility. 
+                            </Text>
+                        </View>
+                        <View style={styles.tableRow}>
+                            
+                        </View>
+                           
+
                     </View>
                 </Page>
             </Document>
