@@ -137,11 +137,6 @@ export default class ConvertToPdf extends React.Component {
         }
     }
 
-  
-    
-    
-
-
     render () {  
         return (
             <Document>
