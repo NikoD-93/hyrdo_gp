@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { Document, Page, Text, View, StyleSheet, Font} from "@react-pdf/renderer";
+import logo from '../images/circle-cropped.png'
+import { Document, Page, Text, View, StyleSheet, Image} from "@react-pdf/renderer";
 
 // Font.register({family: "Roboto, sans-serif", fonts: [
 //    { src: "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap", fontStyle: "normal", fontWeight: 700 }
@@ -16,6 +16,15 @@ const styles = StyleSheet.create({
         textAlign: "center",
         width: "50%",
         alignSelf: "center"
+    },
+    image: {
+        height: "50px",
+        width: "50px",
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginTop: "10px",
+        marginBottom: "px"
+
     },
     fieldTags: {
         fontFamily: "Times-Roman",
@@ -125,6 +134,27 @@ const styles = StyleSheet.create({
         borderBottom: 0,
         marginTop: -1
     },
+    signatureColumn1: {
+        display: "flex",
+        flexDirection: "column",
+        flex: 3,
+        borderWidth: 1, 
+        borderLeftWidth: 0, 
+        borderTopWidth: 0,
+        borderBottomWidth: 0,
+        marginTop: -1 
+    },
+    stampColumn2: {
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+        borderWidth: 1, 
+        borderLeftWidth: 0, 
+        borderTopWidth: 0,
+        borderBottomWidth: 0,
+        marginTop: -1 
+    }
+
 
 })
 
@@ -141,6 +171,9 @@ export default class ConvertToPdf extends React.Component {
         return (
             <Document>
                 <Page size="A4" style={styles.page}>
+                    <View>
+                        <Image style={styles.image} src={logo}/>
+                    </View>
                     <View style={styles.headerContainer}>
                         <Text style={[styles.heading, {fontFamily: "Times-Bold"}]}>ENTRY FORM</Text>
                         <Text style={styles.heading}>EUROPCAR UKRAINIAN GRAND PRIX</Text>
@@ -274,16 +307,32 @@ export default class ConvertToPdf extends React.Component {
                         </View>
                     </View>
                     <View style={styles.table}>
-                        <View style={[styles.tableRow, {borderRightWidth: 1}, {paddingRight: "10px"}]}>
-                            <Text style={[styles.cell, {height: "auto"}, {paddingLeft:"2px"}]}>
+                        <View style={[styles.tableRow, {borderRightWidth: 1}, {borderBottom: 0}, {paddingRight: "10px"}]}>
+                            <Text style={[styles.cell, {height: "auto"}]}>
                             I hereby confirm that the information contained herein is correct. I will conform to the rules and regulations of the U.I.M., National Authority and Local Organizer. I assure that all members of my teams, its sponsors, and other such acquainted persons shall be governed by the same rules previously expressed. By signing this Entry Form, the driver confirms that participation in the above mentioned event for him/her and any other person connected or being the member of his/her team is under their own risk and responsibility. 
                             </Text>
                         </View>
                         <View style={styles.tableRow}>
-                            
+                            <View style={styles.signatureColumn1}>
+                                <Text style={[styles.cell, {height: "auto"}, {borderBottomWidth: 1}, {marginLeft: "-5 px"}]}>
+                                    Driver Signature: {"\n"} 
+                                    Date: 
+                                </Text> 
+                                <Text style={[styles.cell, {height: "auto"}, {borderBottomWidth: 1}]}>
+                                    Parent/Guardian Signature: {`\n`}  
+                                    Date:                      
+                                </Text> 
+                                <Text style={[styles.cell, {height: "auto"}]}>
+                                    N.A. Signature: {`\n`}  
+                                    Date:                      
+                                </Text> 
+                            </View>
+                            <View style={styles.stampColumn2}>
+                                <Text style={[styles.cell, {height: "auto"}, {paddingLeft:"2px"}]}>
+                                    N.A. STAMP 
+                                </Text>
+                            </View>
                         </View>
-                           
-
                     </View>
                 </Page>
             </Document>
