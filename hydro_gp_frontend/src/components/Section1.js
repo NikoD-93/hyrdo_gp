@@ -47,7 +47,7 @@ export default class Section1 extends React.Component {
                 <Form.Group className="text-center">
                     <Form.Label > Date of birth</Form.Label>
                 <Form.Row className="justify-content-center">
-                    <DatePicker name="date_of_birth" onChange={this.props.onDateChange} selected={this.props.selected} value={this.props.date_of_birth}></DatePicker>
+                    <DatePicker name="date_of_birth" onChange={this.props.handleDateChange} selected={this.props.selected} value={this.props.date_of_birth}></DatePicker>
                 </Form.Row>
                 </Form.Group>
                 <Form.Row>
@@ -82,7 +82,7 @@ export default class Section1 extends React.Component {
                     <Col>
                     <Form.Group>
                         <Form.Label>Mobile phone</Form.Label>
-                        <PhoneInput name="mobile_phone" value={this.props.parentState.mobile_phone} onChange={this.props.onMobileChange}  />
+                        <PhoneInput name="mobile_phone" value={this.props.parentState.mobile_phone} onChange={(event) => {this.props.handleMobileChange(event)}}  />
                     </Form.Group>
                     </Col>
                     <Col>

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         marginLeft: "auto",
         marginRight: "auto",
         marginTop: "10px",
-        marginBottom: "px"
+        marginBottom: "7px"
 
     },
     fieldTags: {
@@ -168,6 +168,7 @@ export default class ConvertToPdf extends React.Component {
     }
 
     render () {  
+        console.log(this.props)
         return (
             <Document>
                 <Page size="A4" style={styles.page}>
@@ -314,7 +315,7 @@ export default class ConvertToPdf extends React.Component {
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.signatureColumn1}>
-                                <Text style={[styles.cell, {height: "auto"}, {borderBottomWidth: 1}, {marginLeft: "-5 px"}]}>
+                                <Text style={[styles.cell, {height: "auto"}, {borderBottomWidth: 1}, {marginLeft: "-2 px"}]}>
                                     Driver Signature: {"\n"} 
                                     Date: 
                                 </Text> 
