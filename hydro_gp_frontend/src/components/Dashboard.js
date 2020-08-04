@@ -57,7 +57,7 @@ export default class Dashboard extends React.Component {
             <div>
                 <h1 className="justify-self-center">Your Completed Forms:
                 </h1>
-                 <PDFDownloadLink document={<ConvertToPdf />} fileName="entryform.pdf">
+                 <PDFDownloadLink document={<ConvertToPdf formValues={this.props.formValues} />} fileName="entryform.pdf">
                     {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
                  </PDFDownloadLink>
             </div>
