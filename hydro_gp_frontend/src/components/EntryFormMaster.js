@@ -57,57 +57,57 @@ export default class EntryFormMaster extends React.Component {
         }
     }
 
-    // handleSubmit = (event) => {
-    //     // const entryData = this.state 
-    //     // delete entryData["currentStep"]
-    //     // debugger 
-    //     const postObj = {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Accept": "application/json"
-    //         },
-    //         body: 
-    //             JSON.stringify({
-    //                 first_name: this.state.first_name,
-    //                 last_name: this.state.last_name,
-    //                 date_of_birth: this.state.date_of_birth,
-    //                 street: this.state.street,
-    //                 city: this.state.city,
-    //                 zip: this.state.zip,
-    //                 country: this.state.country,
-    //                 nationality: this.state.nationality,
-    //                 mobile_phone: this.state.mobile_phone,
-    //                 email: this.state.email,
-    //                 emergency_first_name: this.state.emergency_first_name,
-    //                 emergency_last_name: this.state.emergency_last_name,
-    //                 relationship: this.state.relationship,
-    //                 emergency_street: this.state.emergency_street,
-    //                 emergency_city: this.state.emergency_city,
-    //                 emergency_zip: this.state.emergency_zip,
-    //                 emergency_country: this.state.emergency_country,
-    //                 emergency_mobile_phone: this.state.emergency_mobile_phone,
-    //                 emergency_email: this.state.emergency_email,
-    //                 national_authority: this.state.national_authority,
-    //                 boat_class: this.state.boat_class,
-    //                 license_number: this.state.license_number,
-    //                 date_of_issue: this.state.date_of_issue,
-    //                 boat_manufacturer: this.state.boat_manufacturer,
-    //                 year_of_build: this.state.year_of_build,
-    //                 engine: this.state.engine,
-    //                 race_number: this.state.race_number,
-    //                 team_name: this.state.team_name,
-    //                 uim_number: this.state.uim_number,
-    //                 team_manager: this.state.team_manager,
-    //                 user_id: this.state.user_id
-    //             })
-    //         }
-    //     event.preventDefault()
-    //     fetch(ENTRY_FORM_URL, postObj) 
-    //     .then(resp => resp.json())
-    //     .then(entryFormObj => console.log(entryFormObj))
-    //     return this.props.history.push("/dashboard")
-    // }
+    handleSubmit = (event) => {
+        // const entryData = this.state 
+        // delete entryData["currentStep"]
+        // debugger 
+        const postObj = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: 
+                JSON.stringify({
+                    first_name: this.props.parentState.first_name,
+                    last_name: this.props.parentState.last_name,
+                    date_of_birth: this.props.parentState.date_of_birth,
+                    street: this.props.parentState.street,
+                    city: this.props.parentState.city,
+                    zip: this.props.parentState.zip,
+                    country: this.props.parentState.country,
+                    nationality: this.props.parentState.nationality,
+                    mobile_phone: this.props.parentState.mobile_phone,
+                    email: this.props.parentState.email,
+                    emergency_first_name: this.props.parentState.emergency_first_name,
+                    emergency_last_name: this.props.parentState.emergency_last_name,
+                    relationship: this.props.parentState.relationship,
+                    emergency_street: this.props.parentState.emergency_street,
+                    emergency_city: this.props.parentState.emergency_city,
+                    emergency_zip: this.props.parentState.emergency_zip,
+                    emergency_country: this.props.parentState.emergency_country,
+                    emergency_mobile_phone: this.props.parentState.emergency_mobile_phone,
+                    emergency_email: this.props.parentState.emergency_email,
+                    national_authority: this.props.parentState.national_authority,
+                    boat_class: this.props.parentState.boat_class,
+                    license_number: this.props.parentState.license_number,
+                    date_of_issue: this.props.parentState.date_of_issue,
+                    boat_manufacturer: this.props.parentState.boat_manufacturer,
+                    year_of_build: this.props.parentState.year_of_build,
+                    engine: this.props.parentState.engine,
+                    race_number: this.props.parentState.race_number,
+                    team_name: this.props.parentState.team_name,
+                    uim_number: this.props.parentState.uim_number,
+                    team_manager: this.props.parentState.team_manager,
+                    user_id: this.props.parentState.user_id
+                })
+            }
+        event.preventDefault()
+        fetch(ENTRY_FORM_URL, postObj) 
+        .then(resp => resp.json())
+        .then(entryFormObj => console.log(entryFormObj))
+        return this.props.history.push("/dashboard")
+    }
 
     goToDash = () => {
         return this.props.history.push("/participant-registration")
@@ -207,7 +207,7 @@ export default class EntryFormMaster extends React.Component {
                 </Navbar>
                 <Row>
                  <Col lg={{ span: 4, offset: 4 }}>
-                <Form onSubmit={this.props.handleSubmit} id="participant-entry-form" className="rounded border border-dark">
+                <Form onSubmit={this.handleSubmit} id="participant-entry-form" className="rounded border border-dark">
                 <h2 className="text-center" id="part-form-header" style={{color: "black"}}>Participant Registration Form</h2>
                     <Section1
                         selected={this.props.selected}

@@ -184,38 +184,38 @@ export default class ConvertToPdf extends React.Component {
                         <Text style={[{fontSize:10}, {fontFamily: "Times-Bold"}, {marginLeft: "50px"}]}>Section 1</Text>
                     <View style={styles.namesMain}> 
                         <View style={styles.sec1Col1}>
-                            <Text style={styles.fieldTags}>Full Name:</Text> 
+                            <Text style={styles.fieldTags}>Full Name: {this.props.formValues.first_name} {this.props.formValues.last_name.toString()}</Text> 
                         </View>
                         <View style={styles.sec1Col2}>
-                            <Text style={styles.fieldTags}>Date of Birth:</Text>
+        <Text style={styles.fieldTags}>Date of Birth: {this.props.formValues.date_of_birth.toString()}</Text>
                         </View>   
                     </View>
                     <View style={styles.street}>
-                        <Text style={styles.fieldTags}>Street:</Text>
+                        <Text style={styles.fieldTags}>Street: {this.props.formValues.street.toString()}</Text>
                     </View>
                     <View style={styles.table}>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>City:</Text>                         
+                                <Text style={styles.cell}>City: {this.props.formValues.city.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Zip: </Text>
+                                <Text style={styles.cell}>Zip: {this.props.formValues.zip.toString()} </Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>Country:</Text>                         
+                                <Text style={styles.cell}>Country: {this.props.formValues.country.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Nationality:</Text>
+                                <Text style={styles.cell}>Nationality: {this.props.formValues.nationality.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>Mobile Phone:</Text>                         
+                                <Text style={styles.cell}>Mobile Phone: {this.props.formValues.mobile_phone.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Email:</Text>
+                                <Text style={styles.cell}>Email: {this.props.formValues.email.toString()}</Text>
                             </View>
                         </View>
                         <View style={[styles.tableRow, {borderRightWidth: 1}]}>
@@ -223,37 +223,37 @@ export default class ConvertToPdf extends React.Component {
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>Full Name:</Text>                         
+                                <Text style={styles.cell}>Full Name: {this.props.formValues.emergency_first_name.toString()} {this.props.formValues.emergency_last_name.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Relationship:</Text>
+                                <Text style={styles.cell}>Relationship: {this.props.formValues.relationship.toString()}</Text>
                             </View>
                         </View>
                         <View style={[styles.tableRow, {borderRightWidth: 1}]}>
-                            <Text style={styles.cell}>Street</Text>
+                            <Text style={styles.cell}>Street: {this.props.formValues.emergency_street.toString()}</Text>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>City:</Text>                         
+                                <Text style={styles.cell}>City: {this.props.formValues.emergency_city.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Zip: </Text>
-                            </View>
-                        </View>
-                        <View style={styles.tableRow}>
-                            <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>Country:</Text>                         
-                            </View>
-                            <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Nationality:</Text>
+                                <Text style={styles.cell}>Zip: {this.props.formValues.emergency_zip.toString()} </Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.tableColumn1}>
-                                <Text style={styles.cell}>Mobile Phone:</Text>                         
+                                <Text style={styles.cell}>Country: {this.props.formValues.emergency_country.toString()}</Text>                         
                             </View>
                             <View style={styles.tableColumn2}>
-                                <Text style={styles.cell}>Email:</Text>
+                                <Text style={styles.cell}></Text>
+                            </View>
+                        </View>
+                        <View style={styles.tableRow}>
+                            <View style={styles.tableColumn1}>
+                                <Text style={styles.cell}>Mobile Phone: {this.props.formValues.emergency_mobile_phone.toString()}</Text>                         
+                            </View>
+                            <View style={styles.tableColumn2}>
+                                <Text style={styles.cell}>Email: {this.props.formValues.emergency_email.toString()}</Text>
                             </View>
                         </View>
                     </View> 
@@ -261,47 +261,47 @@ export default class ConvertToPdf extends React.Component {
                     <View style={styles.table}>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>National Authority:</Text>                         
+                                <Text style={styles.cell}>National Authority: {this.props.formValues.national_authority.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Class: </Text>
+                                <Text style={styles.cell}>Class: {this.props.formValues.boat_class.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>License Number:</Text>                         
+                                <Text style={styles.cell}>License Number: {this.props.formValues.license_number.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Date of Issue:</Text>
+                                <Text style={styles.cell}>Date of Issue: {this.props.formValues.date_of_issue.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Boat Manufacturer:</Text>                         
+                                <Text style={styles.cell}>Boat Manufacturer: {this.props.formValues.boat_manufacturer.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Year of Build:</Text>
+                                <Text style={styles.cell}>Year of Build: {this.props.formValues.year_of_build.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Engine:</Text>                         
+                                <Text style={styles.cell}>Engine: {this.props.formValues.engine.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>Race Number:</Text>
+                                <Text style={styles.cell}>Race Number: {this.props.formValues.race_number.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Team Name:</Text>                         
+                                <Text style={styles.cell}>Team Name: {this.props.formValues.team_name.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
-                                <Text style={styles.cell}>UIM S.L. Number:</Text>
+                                <Text style={styles.cell}>UIM S.L. Number: {this.props.formValues.uim_number.toString()}</Text>
                             </View>
                         </View>
                         <View style={styles.tableRow}>
                             <View style={styles.boatTableColumn1}>
-                                <Text style={styles.cell}>Team Manager:</Text>                         
+                                <Text style={styles.cell}>Team Manager: {this.props.formValues.team_manager.toString()}</Text>                         
                             </View>
                             <View style={styles.boatTableColumn2}>
                             </View>
