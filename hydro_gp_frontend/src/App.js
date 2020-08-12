@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
-import './index.css';
 import { Switch, Route } from 'react-router-dom'
 import EntryFormMaster from './components/EntryFormMaster'
 
@@ -44,9 +43,8 @@ export default class App extends React.Component {
         team_name: "",
         team_manager: "",
         uim_number: 0,
-        user_id: 1 
-
-
+        user_id: 1,
+        loggedIn: false
     }
 }
 // handleSubmit = (event) => {
