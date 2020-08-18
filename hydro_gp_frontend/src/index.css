@@ -11,7 +11,7 @@
 .App {
   background-image: url('./images/IMG_5829.JPG');
   background-size: cover;
-  height: 100vh;
+  height: 110vh;
   width: auto;
 }
 
@@ -19,7 +19,9 @@
   background-image: url('./images/IMG_5829.JPG');
   background-size: cover;
   height: 90vh;
-  width: 185vh;
+  width: 192vh;
+  padding-top: 75px;
+  
 }
 
 #participant-entry-form {

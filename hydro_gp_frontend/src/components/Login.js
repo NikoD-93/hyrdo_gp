@@ -13,71 +13,42 @@ import logo from '../images/circle-cropped.png'
 import ButtonToolbar from 'react-bootstrap/ButtonToolBar'
 import FormControl from 'react-bootstrap/FormControl'
 
-const USERS_URL = ('http://localhost:3000/users')
+// const USERS_URL = ('http://localhost:3000/users')
 
 export default class Login extends React.Component {
     constructor() {
         super()
         this.state = {
-            email: "",
-            first_name: "",
-            last_name: "",
-            password: ""
+            // email: "",
+            // first_name: "",
+            // last_name: "",
+            // password: ""
         }
     }
-
-    handleChange = (event) => {
-       const value = event.target.value
-        this.setState({
-            ...this.state,
-            [event.target.name]: value
-        })
-    }
-
-    handleLogin = (event) => {
-      event.preventDefault()
-      const postObj = {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-          },
-          body: JSON.stringify({
-              first_name: this.state.first_name,
-              last_name: this.state.last_name,
-              email: this.state.email,
-              password: this.state.password
-          })
-      }
-      fetch(USERS_URL, postObj)
-      .then(resp => resp.json())
-      .then(userObj => console.log(userObj))
-      this.props.handleLogin()
-    }
-
+    
     render() {
-        console.log(this.state)
+        console.log(this.props)
         return (
             <div className="login">
                 <Row >
                  <Col lg={{ span: 4, offset: 4 }}>
-               <Form id="form-login" onSubmit={ (event) => {this.handleLogin(event)}} className="rounded border border-dark">
+               <Form id="form-login" onSubmit={ (event) => {this.props.handleLogin(event)}} className="rounded border border-dark">
                 <h4 className= "text-center" style={{color: "black"}}>Login</h4>
                 <Form.Group controlId="formBasicFirstName">
                 <Form.Label>First name</Form.Label>
-                <Form.Control onChange={(event) => {this.handleChange(event)}} name="first_name" value={this.state.first_name} type="first_name" placeholder="Enter first name" />
+                <Form.Control onChange={(event) => {this.props.handleChange(event)}} name="first_name" value={this.state.first_name} type="first_name" placeholder="Enter first name" />
                 </Form.Group>
                 <Form.Group controlId="formBasicLastName">
                 <Form.Label>Last name</Form.Label>
-                <Form.Control onChange={(event) => {this.handleChange(event)}} name="last_name" value={this.state.last_name} type="last_name" placeholder="Enter last name" />
+                <Form.Control onChange={(event) => {this.props.handleChange(event)}} name="last_name" value={this.state.last_name} type="last_name" placeholder="Enter last name" />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control onChange={(event) => {this.handleChange(event)}} name="email" value={this.state.email} type="email" placeholder="Enter email" />
+                <Form.Control onChange={(event) => {this.props.handleChange(event)}} name="email" value={this.state.email} type="email" placeholder="Enter email" />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control onChange={(event) => {this.handleChange(event)}} name="password" value={this.state.password} type="password" placeholder="Password" />
+                <Form.Control onChange={(event) => {this.props.handleChange(event)}} name="password" value={this.state.password} type="password" placeholder="Password" />
                 </Form.Group>
                 <ButtonToolbar
                     className="justify-content-between" >
