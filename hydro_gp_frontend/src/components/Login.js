@@ -25,36 +25,7 @@ export default class Login extends React.Component {
             // password: ""
         }
     }
-
-    // handleChange = (event) => {
-    //    const value = event.target.value
-    //     this.setState({
-    //         ...this.state,
-    //         [event.target.name]: value
-    //     })
-    // }
-
-    // handleLogin = (event) => {
-    //   event.preventDefault()
-    //   const postObj = {
-    //       method: "POST",
-    //       headers: {
-    //           "Content-Type": "application/json",
-    //           "Accept": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //           first_name: this.state.first_name,
-    //           last_name: this.state.last_name,
-    //           email: this.state.email,
-    //           password: this.state.password
-    //       })
-    //   }
-    //   fetch(USERS_URL, postObj)
-    //   .then(resp => resp.json())
-    //   .then(userObj => console.log(userObj))
-    //   this.props.handleLogin()
-    // }
-
+    
     render() {
         console.log(this.props)
         return (

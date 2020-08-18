@@ -21,46 +21,12 @@ export default class EntryFormMaster extends React.Component {
         super()
         this.state = {
             currentStep: 1
-            // first_name: "",
-            // last_name: "",
-            // date_of_birth: new Date(),
-            // street: "",
-            // city: "",
-            // zip: 0,
-            // country: "",
-            // nationality: "Swedish",
-            // mobile_phone: 0,
-            // email: "",
-            // emergency_first_name: "",
-            // emergency_last_name: "",
-            // relationship: "",
-            // emergency_street: "",
-            // emergency_city: "",
-            // emergency_zip: 0,
-            // emergency_country: "",
-            // emergency_mobile_phone: 0,
-            // emergency_email: "",
-            // national_authority: "Sweden",
-            // boat_class: "",
-            // license_number: 0,
-            // date_of_issue: "date",
-            // boat_manufacturer: "",
-            // year_of_build: 0,
-            // engine: "",
-            // race_number: "",
-            // team_name: "",
-            // team_manager: "",
-            // uim_number: 0,
-            // user_id: 1 
 
 
         }
     }
 
     handleSubmit = (event) => {
-        // const entryData = this.state 
-        // delete entryData["currentStep"]
-        // debugger 
         const postObj = {
             method: "POST",
             headers: {
@@ -112,29 +78,6 @@ export default class EntryFormMaster extends React.Component {
     goToDash = () => {
         return this.props.history.push("/participant-registration")
     }
-
-    // handleChange = (event) => {
-    //     const value = event.target.value
-    //      this.setState({
-    //          ...this.state,
-    //          [event.target.name]: value
-    //      })
-    //  }
-
-    // handleDateChange = (date) => {
-    //     this.setState({
-    //       date_of_birth: date
-    //     });
-    // }
-
-    // handleMobileChange = (number) => {
-    //     let intPhoneNumber = parseInt(number)
-    //     console.log(intPhoneNumber)
-    //     this.setState({
-    //         mobile_phone: number
-    //     })
-    // }
-
 
     nextPage = () => {
         let currentStep = this.state.currentStep
@@ -204,7 +147,11 @@ export default class EntryFormMaster extends React.Component {
                             </LinkContainer>
                             <Nav.Link href="#pricing">Volunteer Registration</Nav.Link>
                         </Nav>
+                        <Form inline> 
+                            <Button onClick={this.props.handleLogout} variant="outline-info">Logout</Button>
+                        </Form>
                 </Navbar>
+                
                 <Row>
                  <Col lg={{ span: 4, offset: 4 }}>
                 <Form onSubmit={this.handleSubmit} id="participant-entry-form" className="rounded border border-dark">

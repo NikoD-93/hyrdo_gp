@@ -110,7 +110,7 @@ export default class Dashboard extends React.Component {
                 </Nav>
                 <Form inline> 
                     {!this.state.loggedIn ? 
-                        <Button onClick={this.renderLoginComp} variant="outline-info">Login/Create Account</Button>
+                        <Button onClick={this.renderLoginComp} variant="outline-info">Race Information</Button>
                         :
                         <Button onClick={this.handleLogout} variant="outline-info">Logout</Button>
                     }   
@@ -122,30 +122,21 @@ export default class Dashboard extends React.Component {
                        handleChange={this.handleChange} 
                 ></Login>
             :
-            // <div>
-            //     <h1 className="justify-self-center">Your Completed Forms:
-            //     </h1>
-            //     <div className="pdf-link-container">
-            //      <PDFDownloadLink className="pdf-link" document={<ConvertToPdf formValues={this.props.formValues} />} fileName="entryform.pdf">
-            //         {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
-            //      </PDFDownloadLink>
-            //     </div>
-            // </div>
             <Container>
-            <Card className="text-center">
-            <Card.Header>Your Completed Forms</Card.Header>
-            <Card.Body>
-              <Card.Title> <PDFDownloadLink className="pdf-link" document={<ConvertToPdf formValues={this.props.formValues} />} fileName="entryform.pdf">
-                     {({ blob, url, loading, error }) => (loading ? 'Loading document...' : '2020 Grand Prix Entry Form')}
-                        </PDFDownloadLink></Card.Title>
-              <Card.Text>
-                Sign this form and hand in to officials once you arrive at the Championship location.
-              </Card.Text>
-              <Button variant="primary">Edit your form</Button>
-            </Card.Body>
-            <Card.Footer className="text-muted">Each participant on a team must complete a separate entry form to be eligible to compete.</Card.Footer>
-          </Card>
-          </Container>
+                <Card className="text-center">
+                    <Card.Header>Your Completed Forms</Card.Header>
+                    <Card.Body>
+                        <Card.Title> <PDFDownloadLink className="pdf-link" document={<ConvertToPdf formValues={this.props.formValues} />} fileName="entryform.pdf">
+                                {({ blob, url, loading, error }) => (loading ? 'Loading document...' : '2020 Grand Prix Entry Form')}
+                                    </PDFDownloadLink></Card.Title>
+                        <Card.Text>
+                            Sign this form and hand in to officials once you arrive at the Championship location.
+                        </Card.Text>
+                        <Button variant="primary">Edit your form</Button>
+                    </Card.Body>
+                    <Card.Footer className="text-muted">Each participant on a team must complete a separate entry form to be eligible to compete.</Card.Footer>
+                </Card>
+            </Container>
             }
             
             </div>
