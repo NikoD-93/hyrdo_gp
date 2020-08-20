@@ -2,9 +2,6 @@ import React from 'react';
 import logo from '../images/circle-cropped.png'
 import { Document, Page, Text, View, StyleSheet, Image} from "@react-pdf/renderer";
 
-// Font.register({family: "Roboto, sans-serif", fonts: [
-//    { src: "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap", fontStyle: "normal", fontWeight: 700 }
-// ]})
 const styles = StyleSheet.create({
     heading: {
         fontFamily: "Times-Roman",
@@ -24,16 +21,11 @@ const styles = StyleSheet.create({
         marginRight: "auto",
         marginTop: "10px",
         marginBottom: "7px"
-
     },
     fieldTags: {
         fontFamily: "Times-Roman",
         fontSize: 10,
-        height: "20px",
-        // borderWidth: 1,
-        // borderTop: 0,
-        // borderRight: 0,
-        // borderLeft: 0 
+        height: "20px", 
     },
     namesMain: {
         display: "flex",

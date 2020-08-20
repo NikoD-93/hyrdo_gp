@@ -1,31 +1,19 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row'
-import Container from 'react-bootstrap/Container'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import { Link } from 'react-router-dom'
 import '../index.css';
-import logo from '../images/circle-cropped.png'
 import ButtonToolbar from 'react-bootstrap/ButtonToolBar'
-import FormControl from 'react-bootstrap/FormControl'
 
-// const USERS_URL = ('http://localhost:3000/users')
 
 export default class Login extends React.Component {
     constructor() {
         super()
         this.state = {
-            // email: "",
-            // first_name: "",
-            // last_name: "",
-            // password: ""
         }
     }
-    
+
     render() {
         console.log(this.props)
         return (
@@ -52,14 +40,12 @@ export default class Login extends React.Component {
                 </Form.Group>
                 <ButtonToolbar
                     className="justify-content-between" >
-                {/* <ButtonGroup> */}
                     <Button id="login-btn" variant="outline-primary" type="submit">
                 Login
                     </Button>
                     <Button variant="outline-dark" type="submit">
                 New user? Click here
                     </Button>
-                {/* </ButtonGroup> */}
             </ButtonToolbar>
         </Form>
     </Col>
